@@ -1,0 +1,25 @@
+VAGRANTFILE_API_VERSION = "2"
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  config.vm.provider "virtualbox"
+  config.vm.box = "centos/atomic-host"
+
+  config.vm.network "private_network", ip: "192.168.77.1"
+  config.vm.hostname = "kafka-docker-demo-vm"
+
+  config.vm.provider "virtualbox" do |vb|
+    # Name of the virtual machine
+    vb.name = "kafka-docker-demo-vm"
+    # Display the VirtualBox GUI when booting the machine
+    vb.gui = false
+    # Customize the amount of memory on the VM:
+    vb.memory = "2048"
+    vb.cpus = 2
+  end
+
+  config.vm.provision "shell", privileged: true, path: "install.sh"
+  config.vm.provision "shell", privileged: true, path: "start.sh", run: "always"
+
+  config.vm.synced_folder '../', '/var/workspace/', type: "rsync"
+
+end
