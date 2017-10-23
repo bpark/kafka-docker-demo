@@ -4,7 +4,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox"
   config.vm.box = "centos/atomic-host"
 
-  config.vm.network "private_network", ip: "192.168.77.1"
+  config.vm.network "private_network", ip: "192.168.77.7"
   config.vm.hostname = "kafka-docker-demo-vm"
 
   config.vm.provider "virtualbox" do |vb|

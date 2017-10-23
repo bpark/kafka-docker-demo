@@ -21,8 +21,17 @@ demo project to show apache kafka and docker in action.
    vagrant ssh	
    ```
    
-The virtual machine runs with `192.168.77.1`.
-    
+The virtual machine runs with `192.168.77.7`.
+
+5. Download apache kafka distribution 
+
+   https://kafka.apache.org/downloads
+   
+6. Create a topic by command line
+
+   ```
+   ./bin/kafka-topics.sh --create --zookeeper 192.168.77.7:2181 --replication-factor 1 --partitions 1 --topic test   
+   ``` 
     
     
    
