@@ -14,7 +14,6 @@ public class ProducerDemo {
 
         props.put("bootstrap.servers", "192.168.77.7:9092");
         props.put("retries", 3);
-        props.put("buffer.memory", 1024 * 1024);
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 
