@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  kafka1:
+    image: "spotify/kafka"
+    ports:
+     - "2181:2181"
+     - "9092:9092"
+    expose:
+     - "2181"
+     - "9092"
+    networks:
+      - kafkanet
+  kafka2:
+    image: "spotify/kafka"
+    ports:
+     - "2182:2181"
+     - "9093:9092"
+    expose:
+     - "2182"
+     - "9093"
+    networks:
+     - kafkanet
+
+networks:
+  kafkanet:

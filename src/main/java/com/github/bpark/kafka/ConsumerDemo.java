@@ -12,7 +12,8 @@ public class ConsumerDemo {
     public static void main(String[] args) throws Exception {
         Properties props = new Properties();
 
-        props.put("bootstrap.servers", "192.168.77.7:9092");
+        props.put("bootstrap.servers", "192.168.77.7:9092,192.168.77.7:9093");
+        //props.put("bootstrap.servers", "192.168.77.7:9093");
         props.put("group.id", "test-group-id");
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
