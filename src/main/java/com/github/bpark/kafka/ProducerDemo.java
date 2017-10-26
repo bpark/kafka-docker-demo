@@ -12,7 +12,7 @@ public class ProducerDemo {
 
         Properties props = new Properties();
 
-        props.put("bootstrap.servers", "192.168.77.7:9092,192.168.77.7:9093");
+        props.put("bootstrap.servers", "192.168.77.7:9092");
         //props.put("bootstrap.servers", "192.168.77.7:9092");
         props.put("retries", 3);
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");

@@ -15,4 +15,3 @@ sudo systemctl daemon-reload
 
 sudo systemctl restart docker.service
 
-docker pull spotify/kafka
