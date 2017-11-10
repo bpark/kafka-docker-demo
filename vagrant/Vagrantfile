@@ -18,6 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.provision "shell", privileged: true, path: "install.sh"
+  config.vm.provision "shell", privileged: true, path: "start.sh", run: "always"
 
   config.vm.synced_folder '../', '/var/workspace/', type: "rsync"
 

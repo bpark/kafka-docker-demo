@@ -24,10 +24,6 @@ public class ProducerDemo {
             System.out.println("Sent message: " + i);
         }
 
-        producer.flush();
-
-        System.out.println("closing");
-
         producer.close();
     }
 }
