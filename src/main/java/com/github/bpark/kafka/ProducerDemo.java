@@ -14,7 +14,7 @@ public class ProducerDemo {
 
         props.put("bootstrap.servers", "192.168.77.7:9092");
         //props.put("bootstrap.servers", "192.168.77.7:9092");
-        props.put("retries", 3);
+        props.put("retries", 0);
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 
@@ -24,6 +24,10 @@ public class ProducerDemo {
             producer.send(new ProducerRecord<>("test", Integer.toString(i), Integer.toString(i)));
             System.out.println("Sent message: " + i);
         }
+
+        producer.flush();
+
+        System.out.println("closing");
 
         producer.close();
     }
