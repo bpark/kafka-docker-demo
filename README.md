@@ -20,20 +20,17 @@ demo project to show apache kafka and docker in action.
    ```
    vagrant ssh	
    ```
+   or
+   ```
+   ssh vagrant@192.168.77.7	
+   ```
+   with password _vagrant_ if the terminal promt does not appear.
+   
    
 The virtual machine runs with `192.168.77.7`.
 
-5. Download apache kafka distribution 
-
-   https://kafka.apache.org/downloads
    
-6. Create a topic
-
-   ```
-   ./bin/kafka-topics.sh --create --zookeeper 192.168.77.7:2181 --replication-factor 1 --partitions 1 --topic test   
-   ``` 
-   
-7. Start a consumer by running _ConsumerDemo_
+7. Start a consumer by running _ConsumerDemo_ or _SimpleStreamsDemo_ for a streaming client demo
 
 8. Start a producer by running _ProducerDemo_   
     

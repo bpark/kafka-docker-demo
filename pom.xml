@@ -8,6 +8,10 @@
     <artifactId>kafka-docker-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <kafka.version>1.0.0</kafka.version>
+    </properties>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -27,7 +31,13 @@
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-clients</artifactId>
-            <version>1.0.0</version>
+            <version>${kafka.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-streams</artifactId>
+            <version>${kafka.version}</version>
         </dependency>
     </dependencies>
 
