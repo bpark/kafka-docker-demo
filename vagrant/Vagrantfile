@@ -13,8 +13,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Display the VirtualBox GUI when booting the machine
     vb.gui = false
     # Customize the amount of memory on the VM:
-    vb.memory = "4096"
-    vb.cpus = 2
+    vb.memory = "8192"
+    vb.cpus = 4
   end
 
   config.vm.provision "shell", privileged: true, path: "install.sh"
