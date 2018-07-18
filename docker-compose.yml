@@ -49,3 +49,16 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+
+  ignite:
+    image: apacheignite/ignite
+    depends_on:
+      - zookeeper
+    ports:
+      - "11211:11211"
+      - "47500-47509:47500-47509"
+      - "47100-47109:47100-47109"
+      - "49112:49112"
+      - "8080:8080"
+    environment:
+      OPTION_LIBS: "ignite-rest-http"
