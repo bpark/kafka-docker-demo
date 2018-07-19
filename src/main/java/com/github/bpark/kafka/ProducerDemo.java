@@ -21,6 +21,11 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.util.Properties;
 
+/**
+ * Simple Producer Demo.
+ *
+ * Produces 10 messages into a topic "test".
+ */
 public class ProducerDemo {
 
     public static void main(String[] args) throws Exception {
