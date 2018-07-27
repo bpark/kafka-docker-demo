@@ -40,6 +40,10 @@ The virtual machine runs with `192.168.77.7`.
 
 Open http://192.168.77.7:8000 and use 192.168.77.7:2181 as connection string. Auth credentials are not required.
 
+## Kafka Topic UI
+
+Located at http://192.168.77.7:8083
+
 ## Demo Description
 
 * **ConsumerDemo** Consumer implementation waiting for messages to consume
