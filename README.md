@@ -27,7 +27,7 @@ demo project to show apache kafka and docker in action.
    with password _vagrant_ if the terminal promt does not appear.
    
    
-The virtual machine runs with `192.168.77.7`.
+The virtual machine runs on ip `192.168.77.7`.
 
    
 7. Start a consumer by running _ConsumerDemo_ or _SimpleStreamsDemo_ for a streaming client demo
